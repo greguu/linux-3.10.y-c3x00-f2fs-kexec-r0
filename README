@@ -1,3 +1,26 @@
+----------------------------------------------------------------------------
+ArchLinuxARM kexecboot kernel 3.10.y-c3x00-f2fs-kexec-r0
+----------------------------------------------------------------------------
+
+This kernel was build using gcc
+
+gcc version 4.9.3 20150304 (prerelease) (crosstool-NG 1.20.0) 
+
+https://archlinuxarm.org/builder/xtools/
+
+and kernel f2fs 3.10.y as base
+
+https://git.kernel.org/pub/scm/linux/kernel/git/jaegeuk/f2fs-stable.git/log/?h=linux-3.10.y
+
+and kexeboot 0.6 
+
+https://github.com/andrea-adami/kexecboot
+
+and several patches.
+
+see .config for more details
+
+----------------------------------------------------------------------------
         Linux kernel release 3.x <http://kernel.org/>
 
 These are the release notes for Linux version 3.  Read them carefully,
