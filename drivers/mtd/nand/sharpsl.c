@@ -106,6 +106,8 @@ static int sharpsl_nand_calculate_ecc(struct mtd_info *mtd, const u_char * dat, 
 /*
  * Main initialization routine
  */
+static const char * const probes[] = { "sharpslpart", NULL };
+
 static int sharpsl_nand_probe(struct platform_device *pdev)
 {
 	struct nand_chip *this;
@@ -182,7 +184,7 @@ static int sharpsl_nand_probe(struct platform_device *pdev)
 	/* Register the partitions */
 	sharpsl->mtd.name = "sharpsl-nand";
 
-	err = mtd_device_parse_register(&sharpsl->mtd, NULL, NULL,
+	err = mtd_device_parse_register(&sharpsl->mtd, probes, NULL,
 					data->partitions, data->nr_partitions);
 	if (err)
 		goto err_add;

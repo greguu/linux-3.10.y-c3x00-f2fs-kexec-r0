@@ -355,6 +355,8 @@ static void tmio_hw_stop(struct platform_device *dev, struct tmio_nand *tmio)
 		cell->disable(dev);
 }
 
+static const char * const probes[] = { "sharpslpart", NULL };
+
 static int tmio_probe(struct platform_device *dev)
 {
 	struct tmio_nand_data *data = dev->dev.platform_data;
@@ -444,7 +446,7 @@ static int tmio_probe(struct platform_device *dev)
 		goto err_scan;
 	}
 	/* Register the partitions */
-	retval = mtd_device_parse_register(mtd, NULL, NULL,
+	retval = mtd_device_parse_register(mtd, probes, NULL,
 					   data ? data->partition : NULL,
 					   data ? data->num_partitions : 0);
 	if (!retval)

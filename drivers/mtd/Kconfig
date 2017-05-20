@@ -155,6 +155,15 @@ config MTD_BCM47XX_PARTS
 	  This provides partitions parser for devices based on BCM47xx
 	  boards.
 
+config MTD_SHARPSL_PARTS
+	tristate "Sharp SL Series NAND flash partition parser"
+	depends on MTD_NAND_SHARPSL || MTD_NAND_TMIO
+	help
+	  This provides the read-only FTL logic necessary to read the partition
+	  table from the NAND flash of Sharp SL Series (Zaurus) and the MTD
+	  partition parser using this code.
+
+
 comment "User Modules And Translation Layers"
 
 config MTD_BLKDEVS
