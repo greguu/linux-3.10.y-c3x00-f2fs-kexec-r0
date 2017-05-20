@@ -457,12 +457,12 @@ static inline void spitz_keys_init(void) {}
 static struct gpio_led spitz_gpio_leds[] = {
 	{
 		.name			= "spitz:amber:charge",
-		.default_trigger	= "sharpsl-charge",
+		.default_trigger	= "heartbeat",
 		.gpio			= SPITZ_GPIO_LED_ORANGE,
 	},
 	{
 		.name			= "spitz:green:hddactivity",
-		.default_trigger	= "ide-disk",
+		.default_trigger	= "disk-activity",
 		.gpio			= SPITZ_GPIO_LED_GREEN,
 	},
 };

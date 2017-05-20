@@ -212,10 +212,10 @@ static inline void led_trigger_event(struct led_trigger *trigger,
 #endif /* CONFIG_LEDS_TRIGGERS */
 
 /* Trigger specific functions */
-#ifdef CONFIG_LEDS_TRIGGER_IDE_DISK
-extern void ledtrig_ide_activity(void);
+#ifdef CONFIG_LEDS_TRIGGER_ATA_DISK
+extern void ledtrig_disk_activity(void);
 #else
-static inline void ledtrig_ide_activity(void) {}
+static inline void ledtrig_disk_activity(void) {}
 #endif
 
 #if defined(CONFIG_LEDS_TRIGGER_CAMERA) || defined(CONFIG_LEDS_TRIGGER_CAMERA_MODULE)
