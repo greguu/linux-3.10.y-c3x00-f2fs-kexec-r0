@@ -20,6 +20,10 @@ and several patches.
 
 see .config for more details
 
+NOTE: There is an experimental C1000 / Akita kexecboot kernel that supports only ext2/3 for rootfs:
+
+https://github.com/greguu/linux-3.10.y-c3x00-f2fs-kexec-r0/releases/download/r0/linux-2.6.26-c1000-frankenstein.tar.gz
+
 ----------------------------------------------------------------------------
         Linux kernel release 3.x <http://kernel.org/>
 
